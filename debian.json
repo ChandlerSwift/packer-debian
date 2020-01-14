@@ -70,6 +70,12 @@
     }
   ],
   "provisioners": [
+    {
+      "scripts": [
+        "script/dotfiles.sh"
+      ],
+      "type": "shell"
+    }
   ],
   "variables": {
     "cpus": "4",
