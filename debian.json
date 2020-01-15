@@ -82,7 +82,8 @@
   "provisioners": [
     {
       "scripts": [
-        "scripts/dotfiles.sh"
+        "scripts/dotfiles.sh",
+        "scripts/passwordless-sudo.sh"
       ],
       "type": "shell"
     }
@@ -100,8 +101,8 @@
     "iso_url": "http://mirror.math.princeton.edu/pub/debian-cd/current/amd64/iso-cd/debian-10.2.0-amd64-netinst.iso",
     "memory": "4096",
     "preseed": "preseed.txt",
-    "ssh_password": "chandler",
-    "ssh_username": "password",
+    "ssh_password": "password",
+    "ssh_username": "chandler",
     "virtualbox_guest_os_type": "Debian_64",
     "vm_name": "debian",
     "vmware_guest_os_type": "debian10-64"
