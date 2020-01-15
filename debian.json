@@ -72,7 +72,7 @@
   "provisioners": [
     {
       "scripts": [
-        "script/dotfiles.sh"
+        "scripts/dotfiles.sh"
       ],
       "type": "shell"
     }
