@@ -122,8 +122,8 @@ d-i passwd/root-login boolean false
 d-i passwd/user-fullname string Chandler Swift
 d-i passwd/username string chandler
 # Normal user's password, either in clear text
-#d-i passwd/user-password password password
-#d-i passwd/user-password-again password password
+d-i passwd/user-password password password
+d-i passwd/user-password-again password password
 # or encrypted using a crypt(3) hash.
 #d-i passwd/user-password-crypted password [crypt(3) hash]
 # Create the first user with the specified UID instead of the default.
@@ -294,6 +294,7 @@ d-i partman/confirm_nooverwrite boolean true
 #d-i base-installer/kernel/image string linux-image-686
 
 ### Apt setup
+apt-cdrom-setup apt-setup/cdrom/set-first boolean false
 # You can choose to install non-free and contrib software.
 #d-i apt-setup/non-free boolean true
 #d-i apt-setup/contrib boolean true
@@ -325,10 +326,10 @@ d-i partman/confirm_nooverwrite boolean true
 
 
 ### Package selection
-#tasksel tasksel/first multiselect standard, web-server, kde-desktop
+tasksel tasksel/first multiselect standard
 
 # Individual additional packages to install
-d-i pkgsel/include string openssh-server build-essential ntp curl nfs-common linux-headers-$(uname -r) build-essential perl dkms net-tools
+d-i pkgsel/include string openssh-server build-essential ntp curl nfs-common linux-headers-$(uname -r) build-essential perl dkms net-tools git
 # Whether to upgrade packages after debootstrap.
 # Allowed values: none, safe-upgrade, full-upgrade
 #d-i pkgsel/upgrade select none
