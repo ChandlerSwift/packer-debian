@@ -48,8 +48,7 @@
       "scripts": [
         "scripts/dotfiles.sh",
         "scripts/passwordless-sudo.sh",
-        "scripts/install-packages.sh",
-        "scripts/install-desktop.sh"
+        "scripts/install-packages.sh"
       ],
       "type": "shell"
     }
