@@ -25,11 +25,13 @@
       ],
       "output_directory": "output-{{ user `vm_name` }}-vmware-iso",
       "shutdown_command": "sudo poweroff",
+      "sound": true,
       "ssh_password": "{{ user `ssh_password` }}",
       "ssh_username": "{{ user `ssh_username` }}",
       "ssh_wait_timeout": "600s",
       "tools_upload_flavor": "linux",
       "type": "vmware-iso",
+      "usb": true,
       "vm_name": "{{ user `vm_name` }}",
       "vmx_data": {
         "memsize": "{{ user `memory` }}",
@@ -83,7 +85,9 @@
     {
       "scripts": [
         "scripts/dotfiles.sh",
-        "scripts/passwordless-sudo.sh"
+        "scripts/passwordless-sudo.sh",
+        "scripts/install-packages.sh",
+        "scripts/install-desktop.sh"
       ],
       "type": "shell"
     }
